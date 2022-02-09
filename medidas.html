@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="cat">
-        <img src="./assets/logo5.png" alt="logo">
+            <img src="./assets/logo5.png" alt="logo" onclick="location.href = 'index.html';">
         </div>
 
         <ul class="nav">
@@ -24,63 +24,71 @@
     </header>
 
     <main class="container">
-        <section>
+        <section id="medidasSection">
             <div class="tittle">
                 <h2>Calculadora de gasto calórico</h2>
-            <p>Selecione o condicionamento físico que mais se aproxima do seu:</p>
+                <p>Informe suas medidas abaixo:</p>
             </div>
             
-            <div id="under"  class="card"   onclick="select1()">      
+            <div id="genderDiv"  class="radioSelect">      
                 <div>
-                    <strong>Abaixo do Peso Adequado</strong>
-                    <p>(Harris-Benedict)</p>
+                    <strong>Gênero</strong>
                 </div>
                 
-                <div>
-                <img src="./assets/bodys-icons/woman-skinny.png" alt="">
-                <img src="./assets/bodys-icons/man-skinny.png" alt="">
+                <div class="radio-item">
+                    <input type="radio" name="gender" id="genderFemale" value="female">
+                    <label for="genderFemale">Feminino</label>
+                </div>
+
+                <div class="radio-item">
+                    <input type="radio" name="gender" id="genderMale" value="male">
+                    <label for="genderMale">Masculino</label>
                 </div>
             </div>
 
-            <div id="ok" class="card"   onclick="select2()">
+            
+            
+            <strong>Idade</strong>
+
+            <div id="age" class="slidecontainer">
                 <div>
-                    <strong>Peso Adequado</strong>
-                    <p>(Harris-Benedict)</p>
+                   <input class="slider" type="range" min="18" max="80" value="40" name="age" id="ageRange" oninput="this.nextElementSibling.value = this.value">
+                   
+                   <output>40</output>
                 </div>
+            </div>
+
+
+            <strong>Altura</strong>
+
+            <div id="height" class="slidecontainer">
+                <div>
+                    <input class="slider" type="range" min="130" max="230" value="170" name="height" id="heightRange" oninput="this.nextElementSibling.value = this.value">
+                    <output>170  </output>
+                </div>
+            </div>
+
+
+            <strong>Peso</strong>
+
+            <div id="weight" class="slidecontainer">
+                <div>
+                    <input class="slider" type="range" min="40" max="180" value="70" name="weight" id="weightRange" oninput="this.nextElementSibling.value = this.value">
+                    <output>70</output>
+                </div>
+            </div>
+
+
+            
+            <div id="medidasButton1" class="button" onclick="getMeasures()">
+                <strong>Avançar<a href=""></a> </strong>
                 
-                <div>
-                    <img src="./assets/bodys-icons/woman-normal.png" alt="">
-                    <img src="./assets/bodys-icons/man-normal.png" alt="">
-                </div>
             </div>
 
-            <div id="over" class="card"  onclick="select3()">
-                <div>
-                    <strong>Sobrepeso/Obesidade</strong>
-                    <p>(Mifflin-St Jeor)</p>
-                </div>
-
-                <div>
-                    <img src="./assets/bodys-icons/woman-fat.png" alt="">
-                    <img src="./assets/bodys-icons/man-fat.png" alt="">
-                </div>
+            <div id="medidasButton2" class="button" onclick="location.href = 'index.html';">
+                <strong>Voltar<a href="index.html"></a> </strong>
             </div>
 
-            <div id="fit" class="card"  onclick="select4()">
-                <div>
-                    <strong>Corpo Atlético</strong>
-                    <p>(Tinsley)</p>
-                </div>
-
-                <div>
-                    <img src="./assets/bodys-icons/woman-fit5.png" alt="">
-                    <img src="./assets/bodys-icons/man-fit5.png" alt="">
-                </div>
-            </div>
-
-            <!-- <div class="button" onclick="location.href = 'medidas.html';">
-                <strong>Avançar</strong>
-            </div> -->
         </section>
     </main>
 

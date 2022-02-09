@@ -10,10 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,400;0,600;1,300;1,600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="calcular()">
     <header>
         <div class="cat">
-        <img src="./assets/logo5.png" alt="logo">
+        <img src="./assets/logo5.png" alt="logo" onclick="location.href = 'index.html';">
         </div>
 
         <ul class="nav">
@@ -27,34 +27,33 @@
         <section>
             <div class="tittle">
                 <h2>Calculadora de gasto calórico</h2>
-            <p>Selecione o condicionamento físico que mais se aproxima do seu:</p>
+                <p>Pronto! Esse é seu gasto calórico diário estimado.:</p>
             </div>
             
-            <div id="under"  class="card"   onclick="select1()">      
-                <div>
-                    <strong>Abaixo do Peso Adequado</strong>
-                    <p>(Harris-Benedict)</p>
+            <div id="kcal"  class="card">      
+                <div id="kcal1">
+                    
+                    <p>Gasto energético diário</p>
+                    <strong>2.000 kcal</strong>
                 </div>
                 
                 <div>
-                <img src="./assets/bodys-icons/woman-skinny.png" alt="">
-                <img src="./assets/bodys-icons/man-skinny.png" alt="">
+                <img src="./assets/icons8-calories-60.png" alt="icone calorias">
                 </div>
             </div>
 
-            <div id="ok" class="card"   onclick="select2()">
-                <div>
-                    <strong>Peso Adequado</strong>
-                    <p>(Harris-Benedict)</p>
+            <div id="protein" class="card">
+                <div id="prot">
+                    <p>Meta de proteínas</p>
+                    <strong>120g</strong>
                 </div>
-                
+
                 <div>
-                    <img src="./assets/bodys-icons/woman-normal.png" alt="">
-                    <img src="./assets/bodys-icons/man-normal.png" alt="">
+                    <img src="./assets/icons8-steak-58.png" alt="icone proteina">
                 </div>
             </div>
 
-            <div id="over" class="card"  onclick="select3()">
+            <!-- <div id="over" class="card">
                 <div>
                     <strong>Sobrepeso/Obesidade</strong>
                     <p>(Mifflin-St Jeor)</p>
@@ -66,7 +65,7 @@
                 </div>
             </div>
 
-            <div id="fit" class="card"  onclick="select4()">
+            <div id="fit" class="card">
                 <div>
                     <strong>Corpo Atlético</strong>
                     <p>(Tinsley)</p>
@@ -76,11 +75,8 @@
                     <img src="./assets/bodys-icons/woman-fit5.png" alt="">
                     <img src="./assets/bodys-icons/man-fit5.png" alt="">
                 </div>
-            </div>
-
-            <!-- <div class="button" onclick="location.href = 'medidas.html';">
-                <strong>Avançar</strong>
             </div> -->
+
         </section>
     </main>
 

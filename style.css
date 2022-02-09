@@ -1,6 +1,6 @@
 /* Global -------------------------------------------- */
 :root{
-    --orange: #FD5B1A;
+    --orange: #fd5a1af8;
     --green: #ADEB46;
     --white-logo: #F1EEC5;
     --white: #fefefe;
@@ -20,14 +20,21 @@ html{
 }
 
 body{
+    display:flex; 
+    flex-direction:column; 
+    height: 100vh;
     background-color: var(--white-ice);
     font-family: 'Saira', sans-serif;
 }
 
 .container{
+    display: inline-block;
     width: min(90vw, 800px);
     margin: auto;
+    border: #968D86 solid 1px;
 }
+
+
 
 /* Header -------------------------------------------- */
 header ul{
@@ -38,16 +45,14 @@ header ul{
 
 header{
     background: var(--orange);
-    border: black solid 0.5px;
-    padding: 1.5rem;
+    box-shadow: #968D86 2px 2px 2px 2px;
+    padding: 1rem 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-header h1{
-    border: black solid 1px;
-}
+
 
 header ul #pic img{
     border: black solid 1px;
@@ -55,7 +60,24 @@ header ul #pic img{
     size: 50%;
 }
 
+header .cat{
+    cursor: pointer;
+}
+
+section{
+    padding: 4rem;
+}
+
+#medidasSection{
+    padding-left: 10rem;
+}
+
+
 /* Main -------------------------------------------- */    
+.color {
+    background-color: yellow;
+}
+
 main{
     background: var(--white);
     display: flex;
@@ -70,44 +92,162 @@ main .tittle{
     margin-bottom: 1.5rem;
 }
 
+main p{
+    text-align: left;
+}
+
+/* Cards and buttons -------------------------------------------- */    
 main .card{
-    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-ice);
     border-radius: .25rem;
     border: black solid 1px;
     padding: 1rem 2rem;
     margin-bottom: 1.5rem;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.568);
+    cursor: pointer;
 }
 
 
 main .card:hover{
-    background-color: rgb(0, 255, 0);
+    background-color: #00ff00;
     
 }
 
 main .button{
     color: white;
     text-align: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.836);
     border-radius: .25rem;
-    border: black solid 1px;
+    border: rgb(0, 0, 0) solid 1px;
     padding: 1rem 2rem;
     margin-bottom: 1.5rem;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.568);
+    cursor: pointer;
+}
+
+main .button:hover{
+    background-color: rgb(12, 12, 12);
+    
+}
+
+#medidasButton1, #medidasButton2{
+    width: 88%;
 }
 
 
+/* Radio -------------------------------------------- */    
+ .radio-item {
+    display: inline-block;
+    padding: 0 6px;
+    margin: 10px 0 0;
+    margin-bottom: 2rem;
+  }
+
+  .radio-item label {
+      cursor: pointer;
+  }
+  
+  /* .radio-item input[type='radio'] {
+    display: none;
+  }
+  
+  .radio-item label {
+    color: #666;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  
+  .radio-item label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    margin: 0 5px 0 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 11px;
+    border: 1px solid black;
+    background-color: transparent;
+  }
+  
+  .radio-item input[type=radio]:checked + label:after {
+    border-radius: 9px;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 9.8px;
+    left: 9px;
+    content: " ";
+    display: block;
+    background: var(--orange);
+  } */ 
+
+  
+/* Sliders -------------------------------------------- */    
+.slidecontainer {
+    /* display: flex; */
+    justify-content: left;
+    width: 1000%; 
+  }
+
+
+.slider {
+    
+    display: inline-block;
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 500px; 
+    height: 5px; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.5; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    border-radius: .25rem;
+    margin-bottom: 3rem;
+    /* padding: 0 60px; */
+  }
+
+.slider:hover {
+    opacity: 1; 
+  }
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 5px; 
+    height: 25px; 
+    background: var(--orange); 
+    cursor: pointer;
+    border-radius: .25rem;
+  }
+
+.height{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  
+
+  #age1{
+      border: black 1px solid;
+      display: flex;
+      justify-content: space-between;
+  }
 
 /* Footer -------------------------------------------- */   
 footer{
-    position: fixed;
+    position: relative;
+    justify-content: center;
+    margin-top: auto;
     padding: 20px;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
     text-align: center;
     background-color: white;
-
+    margin-top: 80px;
 }
 
 /* Responsive -------------------------------------------- */
