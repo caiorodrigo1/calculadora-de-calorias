@@ -46,11 +46,12 @@ header ul{
 header{
     background: var(--orange);
     box-shadow: #968D86 2px 2px 2px 2px;
-    padding: 1rem 4rem;
+    padding: 1rem 6.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 
@@ -68,9 +69,9 @@ section{
     padding: 4rem;
 }
 
-#medidasSection{
+/* #medidasSection{
     padding-left: 10rem;
-}
+} */
 
 
 /* Main -------------------------------------------- */    
@@ -108,6 +109,8 @@ main .card{
     margin-bottom: 1.5rem;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.568);
     cursor: pointer;
+    flex-wrap: wrap;
+    font-size: 90%;
 }
 
 
@@ -133,9 +136,14 @@ main .button:hover{
     
 }
 
-#medidasButton1, #medidasButton2{
+/* #over{
+    flex-wrap: wrap;
+    
+} */
+
+/* #medidasButton1, #medidasButton2{
     width: 88%;
-}
+} */
 
 
 /* Radio -------------------------------------------- */    
@@ -189,16 +197,16 @@ main .button:hover{
 /* Sliders -------------------------------------------- */    
 .slidecontainer {
     /* display: flex; */
-    justify-content: left;
-    width: 1000%; 
+    justify-content: center;
+    width: 78vw; 
   }
 
 
-.slider {
-    
+.slider {    
     display: inline-block;
     -webkit-appearance: none;  
     appearance: none;
+    max-width: 60%;
     width: 500px; 
     height: 5px; 
     background: #d3d3d3; 
@@ -231,13 +239,14 @@ main .button:hover{
       align-items: center;
   }
 
+ 
   
-
+/* 
   #age1{
       border: black 1px solid;
       display: flex;
       justify-content: space-between;
-  }
+  } */
 
 /* Footer -------------------------------------------- */   
 footer{
@@ -253,6 +262,6 @@ footer{
 /* Responsive -------------------------------------------- */
 @media (min-width: 800px){
     html{
-        font-size: 87.5%;
+       font-size: 87.5%;
     }
 }

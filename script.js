@@ -46,6 +46,11 @@ function select4() {
 }
 
 function getMeasures() {
+
+    if((!document.getElementById('genderMale').checked)  && (!document.getElementById('genderFemale').checked) ) {
+        alert("Selecione o gênero")
+    }else{
+
     let gender = document.querySelector('input[name="gender"]:checked').value;
     let sliderAge = document.getElementById('ageRange').value;
     let sliderHeight = document.getElementById('heightRange').value;
@@ -56,12 +61,15 @@ function getMeasures() {
     localStorage.setItem('height', sliderHeight)
     localStorage.setItem('weight', slidergeWeight)
 
-    // console.log(gender)
-    // console.log(sliderAge)
-    // console.log(sliderHeight)
-    // console.log(slidergeWeight)
-    
     window.location.href = "atividade.html";
+}    
+    // if(gender.lenght == 0){
+    //     alert('Selecione um gênero')
+    // }else{
+    //     window.location.href = "atividade.html";
+    // }
+    
+    // window.location.href = "atividade.html";
 }
 
 
@@ -120,56 +128,56 @@ function calcular(){
         case 'HB':
             if(gender == 'male' && conditioning == 'sedentario'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.2;
+                let kcal = parseInt(BMR * 1.2);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
                 
             }else if(gender == 'male' && conditioning == 'pouco'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.4;
+                let kcal = parseInt(BMR * 1.4);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'male' && conditioning == 'moderado'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.5;
+                let kcal = parseInt(BMR * 1.5);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'male' && conditioning == 'ativo'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.7;
+                let kcal = parseInt(BMR * 1.7);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'sedentario'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.2;
+                let kcal = parseInt(BMR * 1.2);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'pouco'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.4;
+                let kcal = parseInt(BMR * 1.4);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'moderado'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.5;
+                let kcal = parseInt(BMR * 1.5);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
                 
             }else if(gender == 'female' && conditioning == 'ativo'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.7;
+                let kcal = parseInt(BMR * 1.7);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
@@ -180,56 +188,56 @@ function calcular(){
         case 'MJ':
             if(gender == 'male' && conditioning == 'sedentario'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.2;
+                let kcal = parseInt(BMR * 1.2);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
                 
             }else if(gender == 'male' && conditioning == 'pouco'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.4;
+                let kcal = parseInt(BMR * 1.4);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'male' && conditioning == 'moderado'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.5;
+                let kcal = parseInt(BMR * 1.5);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'male' && conditioning == 'ativo'){
                 let BMR = 10 * weight + 6.25 * height -5 * age +5;
-                let kcal = BMR * 1.7;
+                let kcal = parseInt(BMR * 1.7);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'sedentario'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.2;
+                let kcal = parseInt(BMR * 1.2);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'pouco'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.4;
+                let kcal = parseInt(BMR * 1.4);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'moderado'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.5;
+                let kcal = parseInt(BMR * 1.5);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
                 
             }else if(gender == 'female' && conditioning == 'ativo'){
                 let BMR = 10 * weight + 6.25 * height -5 * age -161;
-                let kcal = BMR * 1.7;
+                let kcal = parseInt(BMR * 1.7);
                 let prot = 1.5 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
@@ -241,56 +249,56 @@ function calcular(){
         case 'TS':
             if(gender == 'male' && conditioning == 'sedentario'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.2;
+                let kcal = parseInt(BMR * 1.2);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
                 
             }else if(gender == 'male' && conditioning == 'pouco'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.4;
+                let kcal = parseInt(BMR * 1.4);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'male' && conditioning == 'moderado'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.5;
+                let kcal = parseInt(BMR * 1.5);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'male' && conditioning == 'ativo'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.7;
+                let kcal = parseInt(BMR * 1.7);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'sedentario'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.2;
+                let kcal = parseInt(BMR * 1.2);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'pouco'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.4;
+                let kcal = parseInt(BMR * 1.4);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
 
             }else if(gender == 'female' && conditioning == 'moderado'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.5;
+                let kcal = parseInt(BMR * 1.5);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
                 
             }else if(gender == 'female' && conditioning == 'ativo'){
                 let BMR = 24.8 * weight + 10;
-                let kcal = BMR * 1.7;
+                let kcal = parseInt(BMR * 1.7);
                 let prot = 2 * weight;
                 document.getElementById("kcal1").innerHTML = `<strong>Gasto energético diário<br> ${kcal} kcal</strong>`
                 document.getElementById("prot").innerHTML = `<strong>Meta de proteínas<br> ${prot}g`
